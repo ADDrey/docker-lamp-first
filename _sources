@@ -1,0 +1,33 @@
+php:
+https://hub.docker.com/layers/php/library/php/8.0-apache/images/sha256-b1e96cfd6f909963efdd585cc487321b97906f9cdb41e32e429f46899cac1eef?context=explore
+
+mariadb:
+https://hub.docker.com/layers/mariadb/library/mariadb/10.5.8/images/sha256-be0069ebc09c00f5ff0b1900c5df05eb201cc01d3df4ab7828d26d38fae81654?context=explore
+
+phpmyadmin:
+https://hub.docker.com/_/phpmyadmin?tab=description&page=1&ordering=last_updated
+
+video:
+https://www.youtube.com/watch?v=he-Rps8VcFk
+
+image:
+https://hub.docker.com/repository/docker/dreyandrey/lamp-server/general
+
+
+##########   Instructions   ##############
+
+# Push our project in git repository
+$ git status
+$ git add .
+$ git status
+$ git commit -m "init"
+$ git push
+
+# Created our image
+$ docker-compose build
+$ docker tag docker-lamp-first_php:latest dreyandrey/lamp-server
+$ docker push dreyandrey/lamp-server
+
+# Run container with our image
+$ docker-compose pull
+$ docker-compose up -d
